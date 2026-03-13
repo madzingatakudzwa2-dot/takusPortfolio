@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Takudzwa Madzinga | Portfolio</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+margin:0;
+background:#ebeef1; /* professional subtle background */
+color:#181717;
+scroll-behavior:smooth; 
+}
+
+/* HEADER */
+
+header{
+background:#076cdf;
+color:rgba(0, 0, 0, 0.874);
+padding:50px 20px;
+text-align:center;
+}
+
+.profile-container{
+position:relative;
+width:200px;
+height:200px;
+margin:auto;
+margin-bottom:20px;
+}
+
+/* MAIN PROFILE PHOTO (BIG SQUARE) */
+
+.main-photo{
+width:200px;
+height:200px;
+border-radius:10px;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+animation:floatProfile 4s ease-in-out infinite;
+transition:transform .3s;
+}
+
+.main-photo:hover{
+transform:scale(1.05);
+}
+
+@keyframes floatProfile{
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
+}
+
+/* SMALL CORNER PHOTO (FIXED) */
+
+.corner-photo{
+position:absolute;
+bottom:-10px;
+right:-10px;
+width:70px;
+height:70px;
+border-radius:8px;
+object-fit:cover;
+border:3px solid white;
+background:white;
+}
+
+/* BIG NAME */
+
+header h1{
+font-size:42px;
+font-weight:bold;
+margin:10px 0;
+letter-spacing:1px;
+}
+
+/* TYPING TITLE */
+
+.typing{
+overflow:hidden;
+border-right:3px solid white;
+white-space:nowrap;
+width:0;
+margin:auto;
+font-size:18px;
+animation:typing 4s steps(40,end) forwards,
+blink .7s infinite;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:100%}
+}
+
+@keyframes blink{
+50%{border-color:transparent}
+}
+
+/* NAVIGATION */
+
+nav{
+background:#000000;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* SECTIONS */
+
+section{
+padding:50px 20px;
+max-width:900px;
+margin:auto;
+}
+
+h2{
+color:#0077cc;
+border-bottom:2px solid #0077cc;
+display:inline-block;
+padding-bottom:5px;
+}
+
+/* PROJECT CARDS */
+
+.project{
+background:white;
+padding:25px;
+margin-bottom:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+opacity:0;
+transform:translateY(30px);
+transition:all .6s ease;
+}
+
+.project.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* SKILLS */
+
+.skill{
+margin:15px 0;
+}
+
+.skill-name{
+margin-bottom:5px;
+font-weight:bold;
+}
+
+.skill-bar{
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+}
+
+.skill-fill{
+height:10px;
+background:#0077cc;
+width:0;
+animation:fillSkill 2s forwards;
+}
+
+@keyframes fillSkill{
+from{width:0}
+}
+
+/* CONTACT RECTANGLES */
+
+.contact-container{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:20px;
+}
+
+.contact-box{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+padding:15px 20px;
+border-radius:6px;
+border-left:6px solid #0077cc;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+transition:transform .2s, box-shadow .2s;
+}
+
+.contact-box:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+
+.contact-label{
+font-weight:bold;
+color:#0077cc;
+}
+
+.contact-box a{
+text-decoration:none;
+color:#333;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+footer a{
+color:#00aaff;
+text-decoration:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="profile-container">
+
+<img class="main-photo" src="photo2.jpeg">
+
+<img class="corner-photo" src="photo1.jpeg">
+
+</div>
+
+<h1>Takudzwa Madzinga</h1>
+
+<p class="typing">
+Software Developer (Frontend & Backend) | Graphic Designer | Web & Mobile App Developer | Data Analyst | AI & Machine Learning Enthusiast | Cybersecurity & Cloud Computing
+</p>
+
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+I am a passionate software developer and graphic designer with experience in building responsive websites, desktop applications, and innovative digital designs. I enjoy solving real-world problems, learning new technologies, and creating systems that improve efficiency and user experience.  
+
+My expertise spans multiple domains including frontend and backend development, mobile and web applications, database management, and cloud-based solutions. I am also skilled in graphic design and visual storytelling, allowing me to combine technical and creative skills effectively.  
+
+I thrive in collaborative environments, enjoy taking on challenging projects, and am committed to continuous learning and professional growth in computer science, software engineering, and digital design. My goal is to deliver high-quality solutions that are both functional and visually engaging, making a meaningful impact for users and organizations alike.
+</p>
+
+</section>
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project">
+<h3>Manica Diamonds Player Management System</h3>
+<p>
+A desktop application developed to manage player information for the Manica Diamonds football team. The system stores detailed player records including personal information, address, contract details, salary, goals, assists, and performance statistics.
+</p>
+<p>
+It provides an organized way to track players’ performance and contracts, making administrative and managerial tasks more efficient.
+</p>
+<p><strong>Tools:</strong> C#, SQL, Windows Forms</p>
+</div>
+
+<div class="project">
+<h3>University Course Management System</h3>
+<p>
+Desktop system designed to manage student enrollment, courses and grades for lecturers and administrators.
+</p>
+<p><strong>Tools:</strong> C#, SQL, Windows Forms</p>
+</div>
+
+<div class="project">
+<h3>Personal Portfolio Website</h3>
+<p>
+A responsive website built to showcase my programming projects, design work and technical skills.
+</p>
+<p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+</div>
+
+<div class="project">
+<h3>Event Poster Design Project</h3>
+<p>
+Creative poster designs used for university events, student clubs and digital marketing.
+</p>
+<p><strong>Tools:</strong> Photoshop, Illustrator</p>
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skill">
+<div class="skill-name">HTML</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">CSS</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:85%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Java</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:70%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">C#</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:75%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Python</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:70%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Photoshop</div>
+<div class="skill-bar">
+<div class="skill-fill" style="width:80%"></div>
+</div>
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact-container">
+
+<div class="contact-box">
+<span class="contact-label">Email</span>
+<a href="mailto:madzingatakudzwa2@gmail.com">
+madzingatakudzwa2@gmail.com
+</a>
+</div>
+
+<div class="contact-box">
+<span class="contact-label">Phone</span>
+<span>0788939579</span>
+</div>
+
+<div class="contact-box">
+<span class="contact-label">LinkedIn</span>
+<a href="https://www.linkedin.com" target="_blank">
+Takudzwa Madzinga
+</a>
+</div>
+
+<div class="contact-box">
+<span class="contact-label">GitHub</span>
+<a href="https://github.com/yourusername" target="_blank">
+github.com/Takudzwa2_dot
+</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Takudzwa Madzinga. All rights reserved.</p>
+
+</footer>
+
+<script>
+
+const projects=document.querySelectorAll('.project');
+
+function reveal(){
+
+const trigger=window.innerHeight*0.85;
+
+projects.forEach(project=>{
+
+const top=project.getBoundingClientRect().top;
+
+if(top<trigger){
+project.classList.add('show');
+}
+
+});
+
+}
+
+window.addEventListener('scroll',reveal);
+
+reveal();
+
+</script>
+
+</body>
+</html>
